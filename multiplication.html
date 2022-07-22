@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let num=prompt("Enter number");
+    let count=0;
+    
+
+    if (num.length==1)
+    { 
+        
+        console.log("num "+num);
+        console.log("count :"+count)
+
+     }
+     
+    else
+    { persistence(num)
+        
+    }
+
+    function persistence(x){  
+
+        let digits = x.toString().split('');  
+        
+
+        while (digits.length>1)   
+        {
+        let multi=0;
+        for(i=0;i<(x.length-1);i++)   
+          {  
+             multi= digits[i]*digits[i+1];  
+             console.log("multi "+multi);  
+             
+            }
+            digits=multi.toString().split('')  
+            console.log(digits)                
+            count++;                              
+        }
+        
+        console.log("count 2: "+count)
+        return
+              
+ 
+          }
+          
+     
+
+    </script>
+</body>
+</html>
